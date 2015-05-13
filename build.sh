@@ -20,6 +20,8 @@ rm -rf src/*.html \
 # Convert ES6 to ES5
 ./node_modules/.bin/babel src --out-dir public -s inline
 
+# concat bower_components to lib directory
+
 # clean unneeded files
 rm -rf public/_styles \
 		public/*.jade\
