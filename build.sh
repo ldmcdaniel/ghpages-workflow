@@ -8,5 +8,14 @@ mkdir public
 cd src
 find . -name "*.html" | cpio -pdvm ../public
 cd ..
-rm -rf src/**/*.html
-rm -rf public/**/_*.html
+rm -rf src/*.html \
+	src/**/*.html \
+	public/**/_*.html \
+	public/_partials
+./node_modules/.bin/node-sass \
+	--output-style comporessed \
+	--source-map-embed \
+	src/_styles/main.scss public/css/main.css
+
+# Convert ES6 to ES5
+./node_modules/.bin/babel src --out-dir public -s inline
