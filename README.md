@@ -4,7 +4,7 @@
 
 This is an in-class project at NSS.
 
-The project was used to illustrate building apps with Grunt, Gulp, and through bash scripts.
+The project was used to illustrate building apps with Grunt, Gulp, and bash scripts.
 
 ## What technologies does the project use?
 
